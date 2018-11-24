@@ -29,3 +29,8 @@
     remove_reference :tasks, :user, index: true
   end
 end
+= render partial: 'form', locals: { task: @task }
+
+@task.save!
+      logger.debug "task: #{@task.attributes.inspect}"
+      redirect_to @task, notice: "タスク「#{@task.name}」を登録しました"

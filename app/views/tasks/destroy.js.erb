@@ -1,0 +1,8 @@
+document.querySelector("#task-<%= @task.id %>").style.display = 'none';
+
+var message = document.createElement('p')
+message.innerText = 'タスク 「<%= @task.neme %>」を削除しました.残りのタスクは<%= task.count %>件です';
+document.querySelector('table').insertAdjacentElement('beforebegin',message);
+      });
+    });
+  };
